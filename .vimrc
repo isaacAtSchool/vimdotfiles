@@ -24,10 +24,14 @@ call plug#end()
 " }}}
 
 "" Airline plugin theme change
-let g:airline_theme='base16'
+let g:airline_theme='gruvbox'
 
 ""colorschemes added using plugin manager
 colorscheme gruvbox
+let &termguicolors=1
+let &background="dark"
+let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_light='soft'
 
 "" the next section follows vimscript the hard way
 
