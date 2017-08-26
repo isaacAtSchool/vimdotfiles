@@ -27,11 +27,11 @@ call plug#end()
 let g:airline_theme='gruvbox'
 
 ""colorschemes added using plugin manager
-colorscheme gruvbox
 let &termguicolors=1
 let &background="dark"
-let g:gruvbox_contrast_dark='hard'
+let g:gruvbox_contrast_dark='soft'
 let g:gruvbox_contrast_light='soft'
+colorscheme gruvbox
 
 "" the next section follows vimscript the hard way
 
