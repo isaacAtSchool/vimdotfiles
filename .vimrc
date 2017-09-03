@@ -19,8 +19,28 @@ Plug 'easymotion/vim-easymotion'
 " vim surround let's the surrounding of text be changed
 Plug 'tpope/vim-surround'
 
+" python mode editing plugin, monolithic, multi-featured
+" adds 
+"   in editing run
+"   add/ remove breakpoints
+"   python folding
+"   move operators
+"   code checking
+"   linting and style error autofix
+"   refactoring (by rope tools)
+"   strong code completion
+"   goto definition
+"
+Plug 'python-mode/python-mode'
+
+" Autocomplete pop up box as you type 
+Plug 'Valloric/YouCompleteMe', { 'on': [] }
+
+" emmet for vim
+Plug 'mattn/emmet-vim'  
+
 call plug#end()
-"end zof plugin list
+"end of plugin list
 " }}}
 
 "" Airline plugin theme change
@@ -58,6 +78,9 @@ let &wrap = 745
 
 " turn off the vim intro screen 
 set shortmess+=I
+
+" set the dictionary location for vim
+set dictionary=/usr/share/dict/words
 
 " }}}
 
@@ -196,3 +219,13 @@ augroup filetype_vim
 augroup END
 " }}}
 
+" python file settings {{{
+augroup filetype_python
+	autocmd!
+	autocmd FileType python setlocal tabstop=4	
+	autocmd FileType python setlocal expandtab
+	autocmd FileType python setlocal shiftwidth=4	
+	autocmd FileType python setlocal foldlevel=99
+	autocmd FileType python setlocal foldlevelstart=99
+augroup END
+" }}}
