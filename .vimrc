@@ -19,6 +19,9 @@ Plug 'easymotion/vim-easymotion'
 " vim surround let's the surrounding of text be changed
 Plug 'tpope/vim-surround'
 
+" javascript improved folding and syntax
+Plug 'pangloss/vim-javascript'
+
 call plug#end()
 "end zof plugin list
 " }}}
@@ -134,6 +137,8 @@ augroup filetype_vimscript
 	autocmd FileType vim setlocal tabstop=4	
 	autocmd FileType vim setlocal expandtab
 	autocmd FileType vim setlocal shiftwidth=4	
+	autocmd FileType vim setlocal foldlevel=1
+    autocmd FileType vim setlocal foldmethod=marker
 augroup END	
 " }}}
 
@@ -148,6 +153,7 @@ augroup filetype_JavaScript
     autocmd FileType javascript :iabbrev <buffer> iff if ()<Left>
     autocmd FileType javascript :iabbrev <buffer> funcn function(){<CR>}
     autocmd FileType javascript nnoremap <buffer> <leader>c 0i//<esc>
+    autocmd FileType javascript setlocal foldmethod=syntax
 augroup END
 " }}}
 
