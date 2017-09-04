@@ -153,19 +153,22 @@ iabbrev helwo Hello, World
 
 "" AUTOCOMMAND GROUPS
 "" source the vimrc so no autocmds are loaded more than once
-" vimscript files
+
+" EMMET plugin settings {{{
+let g:user_emmet_leader_key='<C-e>'
+" }}}
+
 " Vimscript file settings part 1 {{{
 augroup filetype_vimscript
 	autocmd!
 	autocmd FileType vim setlocal tabstop=4	
 	autocmd FileType vim setlocal expandtab
 	autocmd FileType vim setlocal shiftwidth=4	
-	autocmd FileType vim setlocal foldlevel=1
+	autocmd FileType vim setlocal foldlevel=0
     autocmd FileType vim setlocal foldmethod=marker
 augroup END	
 " }}}
 
-" js styling using autocmd
 " Javascript file settings {{{
 augroup filetype_JavaScript
     autocmd!
@@ -222,6 +225,15 @@ augroup END
 augroup filetype_vim
     autocmd!
     autocmd FileType vim setlocal foldmethod=marker
+augroup END
+" }}}
+
+" html file settings ---------------------------------------- {{{
+augroup filetype_html
+    autocmd!
+    autocmd FileType html setlocal foldmethod=syntax
+    autocmd FileType html EmmetInstall
+    
 augroup END
 " }}}
 
