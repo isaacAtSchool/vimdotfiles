@@ -42,6 +42,9 @@ Plug 'Valloric/YouCompleteMe', { 'on': [] }
 " emmet for vim
 Plug 'mattn/emmet-vim'  
 
+" nerdtree
+Plug 'scrooloose/nerdtree'
+
 call plug#end()
 "end of plugin list
 " }}}
